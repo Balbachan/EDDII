@@ -17,7 +17,7 @@ Alunos:
 #include <iostream>
 #include <fstream>
 #include "No.h"
-#include "ClasseArvore.h"
+#include "Arvore.h"
 
 using namespace std;
 

@@ -1,7 +1,10 @@
-#ifndef CLASSE_ARVORE_H
-#define CLASSE_ARVORE_H
+#ifndef ARVORE_H
+#define ARVORE_H
 
+#include <No.h>
 #include <iostream>
+
+using namespace std; 
 
 class ArvoreBST {
     private:
@@ -49,7 +52,7 @@ class ArvoreBST {
     }
 
     void emOrdem(No *no) {
-        if(no != NULL) {`
+        if(no != NULL) {
             emOrdem(no -> getEsq());
             cout << no -> getChave() << " ";
             emOrdem(no -> getDir());
@@ -57,7 +60,7 @@ class ArvoreBST {
     }
 
     void preOrdem(No *no) {
-        if(no != NULL) {`
+        if(no != NULL) {
             cout << no -> getChave() << " ";
             emOrdem(no -> getEsq());
             emOrdem(no -> getDir());
@@ -65,7 +68,7 @@ class ArvoreBST {
     }
 
     void posOrdem(No *no) {
-        if(no != NULL) {`
+        if(no != NULL) {
             emOrdem(no -> getEsq());
             emOrdem(no -> getDir());
             cout << no -> getChave() << " ";
@@ -76,7 +79,7 @@ class ArvoreBST {
         if (raiz == NULL) return NULL;
         No* atual = no;
         while(atual -> getChave() != dado) {
-            if(dado < atual -> getchave())
+            if(dado < atual -> getChave())
                 atual = atual -> getEsq();
             else 
                 atual = atual -> getDir();
@@ -85,8 +88,6 @@ class ArvoreBST {
         }
         return atual;
     }
-
-
 
 }
 
