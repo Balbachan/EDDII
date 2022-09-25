@@ -3,5 +3,11 @@
 
 #include <iostream>
 
+class Alimentos {
+    public: 
+
+    private:
+    
+};
 
 #endif

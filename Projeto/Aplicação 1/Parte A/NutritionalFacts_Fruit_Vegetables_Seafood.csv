@@ -1,5 +1,4 @@
-Food and Serving;Calories;Calories from Fat;Total Fat;Total Fat;Sodium;Sodium;Potassium;Potassium;Total Carbo-hydrate;Total Carbo-hydrate;Dietary Fiber;Dietary Fiber;Sugars;Protein;Vitamin A;Vitamin C;Calcium;  Iron  ;Saturated Fat;Saturated Fat;Chole-sterol;Chole-sterol;Food Type
-;;;(g);(%DV);(g);(%DV);(g);(%DV);(g);(%DV);(g);(%DV);(g);(g);(%DV);(%DV);(%DV);(%DV);(%DV);(mg) ;(%DV);(mg) ;
+Food and Serving;Calories;Calories from Fat;Total Fat (g);Total Fat (%DV);Sodium (g);Sodium (%DV);Potassium (g);Potassium (%DV);Total Carbo-hydrate (g);Total Carbo-hydrate (%DV);Dietary Fiber (g);Dietary Fiber (%DV);Sugars (g);Protein (g);Vitamin A (%DV);Vitamin C (%DV);Calcium (%DV);Iron (%DV);Saturated Fat (%DV);Saturated Fat (mg);Chole-sterol (%DV);Chole-sterol (mg);Food Type
 Asparagus;20;0;0;0;0;0;230;7;4;1;2;8;2;2;10;15;2;2;;;;;Vegetables, Serving Size (gram weight/ ounce weight)
 Bell Pepper;25;0;0;0;40;2;220;6;6;2;2;8;4;1;4;190;2;4;;;;;Vegetables, Serving Size (gram weight/ ounce weight)
 Broccoli;45;0;0.5;1;80;3;460;13;8;3;3;12;2;4;6;220;6;6;;;;;Vegetables, Serving Size (gram weight/ ounce weight)

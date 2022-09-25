@@ -77,7 +77,7 @@ class ArvoreBST {
 
     No *Pesquisar(int dado, No* no) {
         if (raiz == NULL) return NULL;
-        No* atual = no;
+            No* atual = no;
         while(atual -> getChave() != dado) {
             if(dado < atual -> getChave())
                 atual = atual -> getEsq();
@@ -89,6 +89,6 @@ class ArvoreBST {
         return atual;
     }
 
-}
+};
 
 #endif
