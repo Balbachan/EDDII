@@ -2,9 +2,13 @@
 #define ALIMENTOS.H
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 class Alimentos {
     public: 
+    string calorias; 
 
     private:
     

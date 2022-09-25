@@ -59,6 +59,7 @@ class ArvoreBST {
         }
     }
 
+    //to do: precisamos arrumar o preOrdem (ajuste Alimentos.h) 
     void preOrdem(No *no) {
         if(no != NULL) {
             cout << no -> getChave() << " ";
@@ -67,6 +68,7 @@ class ArvoreBST {
         }
     }
 
+    //to do: precisamos arrumar o posOrdem (ajuste Alimentos.h)
     void posOrdem(No *no) {
         if(no != NULL) {
             emOrdem(no -> getEsq());
@@ -89,6 +91,7 @@ class ArvoreBST {
         return atual;
     }
 
+    //to do: precisamos arrumar o cálculo da largura 
 };
 
 #endif
