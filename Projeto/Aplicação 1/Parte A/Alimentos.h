@@ -1,24 +1,23 @@
-#ifndef ALIMENTOS_H
-#define ALIMENTOS_H
+#ifndef ALIMENTOS_H_
+#define ALIMENTOS_H_
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-class Alimentos
+
+ class Alimentos
    {
-
-   //TO-DO: CRIAR ATRIBUTO CONSTRUTOR
-
    private:
+      string key;
+      string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
+      string totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
+      string calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
+      int * left;
+      int * right;
 
-      int option;
-      string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumD; 
-      string totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC;
-      string calcium, iron, saturatedDV, saturatedMG, cholesterDV, cholesterMG, foodType;
 
-   public: 
+   public:
       // construtor 
       string Alimentos(){
          this->calories = calories;
@@ -44,10 +43,12 @@ class Alimentos
          this->cholesterDV = cholesterDV;
          this->cholesterMG = cholesterMG;
          this->foodType = foodType;
-      }
+      } 
 
+      //getters e setters atributos  
+      string getKey() {return this->key;};
+      void setKey(string key){this->key = key;};
 
-      // getters e setters 
       string getCalories() {return this->calories;};
       void setCalories(string calories){this->calories = calories;};
 
@@ -117,6 +118,13 @@ class Alimentos
       string getFoodType() {return this->foodType;};
       void setFoodType(string foodType){this->foodType = foodType;}
 
+
+      //getters e setters posição   
+      int * getLeft(){return this->left;}
+      void setLeft(int * left){this->left = left;}
+      
+      int * getRight(){return this->right;}
+      void setRight(int * right){this->right = right;}
    };
 
 #endif
