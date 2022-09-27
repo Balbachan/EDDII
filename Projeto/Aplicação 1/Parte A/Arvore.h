@@ -159,177 +159,177 @@ public:
 	// busca iterativa
 	//**********************************
 
-	float principalSearch(Node *node, string key)
-	{
+	// // float principalSearch(Node *node, string key)
+	// {
 
-		while (node != nullptr)
-		{
-			if (node->getKey() == key)
-			{
+	// 	while (node != nullptr)
+	// 	{
+	// 		if (node->getKey() == key)
+	// 		{
 
-				int option = 1;
+	// 			int option = 1;
 
-				while (option != 0)
-				{
-					cout << "\n\nQual informação deseja?\n"
-						 << "\n1. calories"
-						 << "\n2. caloriesFromFat"
-						 << "\n3.  totalFatG"
-						 << "\n4. totalfatDV"
-						 << "\n5. sodiumG"
-						 << "\n6. sodiumDV"
-						 << "\n7. potassiumG"
-						 << "\n8. potassiumDV"
-						 << "\n9. totalCarbG"
-						 << "\n10. totalCarbDV"
-						 << "\n11. dietaryFiberG"
-						 << "\n12. dietaryFiberDV"
-						 << "\n13. sugars"
-						 << "\n14. protein"
-						 << "\n15. vitaminA"
-						 << "\n16. vitaminC"
-						 << "\n17. calcium"
-						 << "\n18. iron"
-						 << "\n19. saturatedDV"
-						 << "\n20. saturatedMG"
-						 << "\n21. cholesterolDV"
-						 << "\n22. cholesterolMG"
-						 << "\n23. foodType"
-						 << endl;
-					cin >> option;
-					switch (option)
-					{
-					case 1:
-					{
-						return ((this->getDados())->getCalories());
-						break;
-					}
-					case 2:
-					{
-						return ((node->getDados())->getCaloriesFromFat());
-						break;
-					}
-					case 3:
-					{
-						return ((node->getDados())->getTotalFatG());
-						break;
-					}
-					case 4:
-					{
-						return ((node->getDados())->getTotalFatDV());
-						break;
-					}
-					case 5:
-					{
-						return ((node->getDados())->getSodiumG());
-						break;
-					}
-					case 6:
-					{
-						return ((node->getDados())->getSodiumDV());
-						break;
-					}
-					case 7:
-					{
-						return ((node->getDados())->getPotassiumG());
-						break;
-					}
-					case 8:
-					{
-						return ((node->getDados())->getPotassiumDV());
-						break;
-					}
-					case 9:
-					{
-						return ((node->getDados())->getTotalCarbG());
-						break;
-					}
-					case 10:
-					{
-						return ((node->getDados())->getTotalCarbDV());
-						break;
-					}
-					case 11:
-					{
-						return ((node->getDados())->getDietaryFiberG());
-						break;
-					}
-					case 12:
-					{
-						return ((node->getDados())->getDietaryFiberDV());
-						break;
-					}
-					case 13:
-					{
-						return ((node->getDados())->getSugars());
-						break;
-					}
-					case 14:
-					{
-						return ((node->getDados())->getProtein());
-						break;
-					}
-					case 15:
-					{
-						return ((node->getDados())->getVitaminA());
-						break;
-					}
-					case 16:
-					{
-						return ((node->getDados())->getVitaminC());
-						break;
-					}
-					case 17:
-					{
-						return ((node->getDados())->getCalcium());
-						break;
-					}
-					case 18:
-					{
-						return ((node->getDados())->getIron());
-						break;
-					}
-					case 19:
-					{
-						return ((node->getDados())->getSaturatedDV());
-						break;
-					}
-					case 20:
-					{
-						return ((node->getDados())->getSaturatedMG());
-						break;
-					}
-					case 21:
-					{
-						return ((node->getDados())->getCholesterDV());
-						break;
-					}
-					case 22:
-					{
-						return ((node->getDados())->getCholesterMG());
-						break;
-					}
-					case 23:
-					{
-						return ((node->getDados())->getFoodType());
-						break;
-					}
-					case 0:
-					{
-						break;
-					}
-					}
-				}
+	// 			while (option != 0)
+	// 			{
+	// 				cout << "\n\nQual informação deseja?\n"
+	// 					 << "\n1. calories"
+	// 					 << "\n2. caloriesFromFat"
+	// 					 << "\n3.  totalFatG"
+	// 					 << "\n4. totalfatDV"
+	// 					 << "\n5. sodiumG"
+	// 					 << "\n6. sodiumDV"
+	// 					 << "\n7. potassiumG"
+	// 					 << "\n8. potassiumDV"
+	// 					 << "\n9. totalCarbG"
+	// 					 << "\n10. totalCarbDV"
+	// 					 << "\n11. dietaryFiberG"
+	// 					 << "\n12. dietaryFiberDV"
+	// 					 << "\n13. sugars"
+	// 					 << "\n14. protein"
+	// 					 << "\n15. vitaminA"
+	// 					 << "\n16. vitaminC"
+	// 					 << "\n17. calcium"
+	// 					 << "\n18. iron"
+	// 					 << "\n19. saturatedDV"
+	// 					 << "\n20. saturatedMG"
+	// 					 << "\n21. cholesterolDV"
+	// 					 << "\n22. cholesterolMG"
+	// 					 << "\n23. foodType"
+	// 					 << endl;
+	// 				cin >> option;
+	// 				switch (option)
+	// 				{
+	// 				case 1:
+	// 				{
+	// 					return ((this->getDados())->getCalories());
+	// 					break;
+	// 				}
+	// 				case 2:
+	// 				{
+	// 					return ((node->getDados())->getCaloriesFromFat());
+	// 					break;
+	// 				}
+	// 				case 3:
+	// 				{
+	// 					return ((node->getDados())->getTotalFatG());
+	// 					break;
+	// 				}
+	// 				case 4:
+	// 				{
+	// 					return ((node->getDados())->getTotalFatDV());
+	// 					break;
+	// 				}
+	// 				case 5:
+	// 				{
+	// 					return ((node->getDados())->getSodiumG());
+	// 					break;
+	// 				}
+	// 				case 6:
+	// 				{
+	// 					return ((node->getDados())->getSodiumDV());
+	// 					break;
+	// 				}
+	// 				case 7:
+	// 				{
+	// 					return ((node->getDados())->getPotassiumG());
+	// 					break;
+	// 				}
+	// 				case 8:
+	// 				{
+	// 					return ((node->getDados())->getPotassiumDV());
+	// 					break;
+	// 				}
+	// 				case 9:
+	// 				{
+	// 					return ((node->getDados())->getTotalCarbG());
+	// 					break;
+	// 				}
+	// 				case 10:
+	// 				{
+	// 					return ((node->getDados())->getTotalCarbDV());
+	// 					break;
+	// 				}
+	// 				case 11:
+	// 				{
+	// 					return ((node->getDados())->getDietaryFiberG());
+	// 					break;
+	// 				}
+	// 				case 12:
+	// 				{
+	// 					return ((node->getDados())->getDietaryFiberDV());
+	// 					break;
+	// 				}
+	// 				case 13:
+	// 				{
+	// 					return ((node->getDados())->getSugars());
+	// 					break;
+	// 				}
+	// 				case 14:
+	// 				{
+	// 					return ((node->getDados())->getProtein());
+	// 					break;
+	// 				}
+	// 				case 15:
+	// 				{
+	// 					return ((node->getDados())->getVitaminA());
+	// 					break;
+	// 				}
+	// 				case 16:
+	// 				{
+	// 					return ((node->getDados())->getVitaminC());
+	// 					break;
+	// 				}
+	// 				case 17:
+	// 				{
+	// 					return ((node->getDados())->getCalcium());
+	// 					break;
+	// 				}
+	// 				case 18:
+	// 				{
+	// 					return ((node->getDados())->getIron());
+	// 					break;
+	// 				}
+	// 				case 19:
+	// 				{
+	// 					return ((node->getDados())->getSaturatedDV());
+	// 					break;
+	// 				}
+	// 				case 20:
+	// 				{
+	// 					return ((node->getDados())->getSaturatedMG());
+	// 					break;
+	// 				}
+	// 				case 21:
+	// 				{
+	// 					return ((node->getDados())->getCholesterDV());
+	// 					break;
+	// 				}
+	// 				case 22:
+	// 				{
+	// 					return ((node->getDados())->getCholesterMG());
+	// 					break;
+	// 				}
+	// 				case 23:
+	// 				{
+	// 					return ((node->getDados())->getFoodType());
+	// 					break;
+	// 				}
+	// 				case 0:
+	// 				{
+	// 					break;
+	// 				}
+	// 				}
+	// 			}
 
-				if (key.getKey() < node->getKey())
-					node = node->getLeft();
-				else
-					node = node->getRight();
-			}
+	// 			if (key.getKey() < node->getKey())
+	// 				node = node->getLeft();
+	// 			else
+	// 				node = node->getRight();
+	// 		}
 
-			return key.getFoodType();
-		}
-	}
+	// 		return key.getFoodType();
+	// 	}
+	// }
 	//**********************************
 
 	void auxOrder(Node *node)
