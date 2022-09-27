@@ -18,7 +18,7 @@ public:
 	}
 
 	//******************************************************************
-	void insert(int key)
+	void insert(string key)
 	{
 		if (source == nullptr)		// verifica se a ?rvore est? vazia
 			source = new Node(key); // cria um novo n?
@@ -26,7 +26,7 @@ public:
 			insertAux(source, key);
 	}
 
-	void insertAux(Node *node, int key)
+	void insertAux(Node *node, string key)
 	{
 		// se for menor, ent?o insere ? esquerda
 		if (key < node->getKey())
@@ -100,12 +100,12 @@ public:
 	// ATIVIDADES 1
 
 	// Tree-Search(x,k)
-	// pesquisarRec(int chave)
-	Node *recursiveSearch(Node *node, int key)
+	// pesquisarRec(string chave)
+	Node *recursiveSearch(Node *node, string key)
 	{
 		if (node == nullptr)
 		{
-			cout << "\nN�o foi achado!";
+			cout << "\nNão foi achado!";
 			return node;
 		}
 		if (key == node->getKey())
@@ -121,8 +121,8 @@ public:
 	}
 
 	// iterative-Tree-Search(x,k)
-	// pesquisarIter(int chave)
-	Node *iterativeSearch(Node *node, int key)
+	// pesquisarIter(string chave)
+	Node *iterativeSearch(Node *node, string key)
 	{
 		while (node != nullptr)
 		{
@@ -141,6 +141,88 @@ public:
 		return node;
 	}
 
+//ITEM 6 - PARTE A:
+//modificação método de busca baseado em 
+//busca iterativa
+//**********************************
+
+	string iterativeSearch(Node *node, string key)
+	{
+
+		while (node != nullptr)
+		{
+			if (node->getKey() == key)
+			{
+				         
+         		int option = 1;
+
+				while (option != 0){
+				cout<<"\nQual informação deseja?\n"
+				<<
+				"
+				\n1. calories
+				\n2. caloriesFromFat
+				\n3.  totalFatG
+				\n4. totalfatDV
+				\n5. sodiumG
+				\n6. sodiumDV
+				\n7. potassiumG
+				\n8. potassiumDV
+				\n9. totalCarbG
+				\n10. totalCarbDV
+				\n11. dietaryFiberG
+				\n12. dietaryFiberDV
+				\n13. sugars
+				\n14. protein
+				\n15. vitaminA
+				\n16. vitaminC
+				\n17. calcium
+				\n18. iron
+				\n19. saturatedDV
+				\n20. saturatedMG
+				\n21. cholesterolDV
+				\n22. cholesterolMG
+				\n23. foodType
+				"<<endl;
+					cin >> option;
+					switch(option){
+						case 1:{return(node->getCalories());break;}
+						case 2:{return(node->getCaloriesFromFat());break;}
+						case 3:{return(node->getTotalFatG());break;}
+						case 4:{return(node->getTotalFatDV());break;}
+						case 5:{return(node->getSodiumG());break;}
+						case 6:{return(node->getSodiumDV());break;}
+						case 7:{return(node->getPotassiumG());break;}
+						case 8:{return(node->getPotassiumDV());break;}
+						case 9:{return(node->getTotalCarbG());break;}
+						case 10:{return(node->getTotalCarbDV());break;}
+						case 11:{return(node->getDietaryFiberG());break;}
+						case 12:{return(node->getDietaryFiberDV());break;}
+						case 13:{return(node->getSurgars());break;}
+						case 14:{return(node->getProtein());break;}
+						case 15:{return(node->getVitaminA());break;}
+						case 16:{return(node->getVitaminC());break;}
+						case 17:{return(node->getCalcium());break;}
+						case 18:{return(node->getIron());break;}
+						case 19:{return(node->getSaturatedDV());break;}
+						case 20:{return(node->getSaturatedMG());break;}
+						case 21:{return(node->getCholesterDV());break;}
+						case 22:{return(node->getCholesterMG());break;}
+						case 23:{return(node->getFoodType());break;}
+						case 0:{break;}
+				}
+			}
+
+			if (key < node->getKey())
+				node = node->getLeft();
+			else
+				node = node->getRight();
+		}
+
+		return node->getKey();
+	}
+//**********************************
+
 	void auxOrder(Node *node)
 	{
 		if (node != nullptr)
@@ -148,6 +230,14 @@ public:
 			auxOrder(node->getLeft());
 			auxOrder(node->getRight());
 		}
+	}
+
+	// qdeNos()
+	int nodeCounter(Node *node)
+	{
+		if (node == nullptr)
+			return 0;
+		else return(nodeCounter(node->getLeft()) + nodeCounter(node->getRight()) + 1);
 	}
 
 	// alturaBST()
@@ -200,13 +290,13 @@ public:
 		}
 	}
 
-	// removerFolha(int chave)
-	Node *deleteLeaf(int key)
+	// removerFolha(string chave)
+	Node *deleteLeaf(string key)
 	{
 		Node *node;
 		node = iterativeSearch(this->source, key);
 
-		if (node->getLeft() == nullptr && node->getRight() == nullptr) // � uma folha
+		if (node->getLeft() == nullptr && node->getRight() == nullptr) // é uma folha
 		{
 			delete node;
 			node = nullptr;
@@ -215,7 +305,7 @@ public:
 		}
 		else
 		{
-			cout << "\nN�o � uma folha";
+			cout << "\nNão é uma folha";
 			return node;
 		}
 	}
