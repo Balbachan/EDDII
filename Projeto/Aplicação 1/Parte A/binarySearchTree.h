@@ -1,14 +1,14 @@
 /*
-    Faculdade de Computação e Informática
-    Estrutura de Dados II
-    Professor: Jean M. Laine
-    Aplicação 1 (Parte A e B)
-    Aplicação que ajuda a controlar as calorias e a perda de peso
-    Alunos:
-        - Diego Guedes de Moraes (32148127)
-        - Erick Cauã Ferreira Gomes (32116251)
-        - Laura C. Balbachan dos Santos (32173008)
-        - Pedro Moreno Campos (32172656)
+	Faculdade de Computação e Informática
+	Estrutura de Dados II
+	Professor: Jean M. Laine
+	Aplicação 1 (Parte A e B)
+	Aplicação que ajuda a controlar as calorias e a perda de peso
+	Alunos:
+		- Diego Guedes de Moraes (32148127)
+		- Erick Cauã Ferreira Gomes (32116251)
+		- Laura C. Balbachan dos Santos (32173008)
+		- Pedro Moreno Campos (32172656)
 */
 
 #include <iostream>
@@ -20,7 +20,7 @@ class binarySearchTree
 {
 private:
 	Node *source;
-	
+
 public:
 	binarySearchTree()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 	//******************************************************************
-	void insert(int key)
+	void insert(string key)
 	{
 		if (source == nullptr)		// verifica se a ?rvore est? vazia
 			source = new Node(key); // cria um novo n?
@@ -36,7 +36,7 @@ public:
 			insertAux(source, key);
 	}
 
-	void insertAux(Node *node, int key)
+	void insertAux(Node *node, string key)
 	{
 		// se for menor, ent?o insere ? esquerda
 		if (key < node->getKey())
@@ -111,7 +111,7 @@ public:
 
 	// Tree-Search(x,k)
 	// pesquisarRec(int chave)
-	Node *recursiveSearch(Node *node, int key)
+	Node *recursiveSearch(Node *node, string key)
 	{
 		if (node == nullptr)
 		{
@@ -132,7 +132,7 @@ public:
 
 	// iterative-Tree-Search(x,k)
 	// pesquisarIter(int chave)
-	Node *iterativeSearch(Node *node, int key)
+	Node *iterativeSearch(Node *node, string key)
 	{
 		while (node != nullptr)
 		{
@@ -211,7 +211,7 @@ public:
 	}
 
 	// removerFolha(int chave)
-	Node *deleteLeaf(int key)
+	Node *deleteLeaf(string key)
 	{
 		Node *node;
 		node = iterativeSearch(this->source, key);

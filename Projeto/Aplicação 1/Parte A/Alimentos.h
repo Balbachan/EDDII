@@ -18,117 +18,117 @@
 #include <string>
 using namespace std;
 
+class Alimentos
+{
+private:
+   string key, foodType;
+   float calories, caloriesFromFat, totalFatG, totalFatDV, sodiumG, sodiumDV, potassiumG, potassiumDV;
+   float totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC;
+   float calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG;
 
- class Alimentos
+public:
+   Alimentos(){};
+   // construtor
+   Alimentos(string key, float calories, float caloriesFromFat, float totalFatG, float totalFatDV, float sodiumG, float potassiumG, float potassiumDV, float totalCarbG, float totalCarbDV, float dietaryFiberG, float dietaryFiberDV, float sugars, float protein, float vitaminA, float vitaminC, float calcium, float iron, float saturatedFatDV, float saturatedFatMG, float cholesterolDV, float cholesterolMG, string foodType)
    {
-   private:
-      string key;
-      float calories, caloriesFromFat, totalFatG, totalFatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
-      float totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
-      float calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
+      this->key = key;
+      this->calories = calories;
+      this->caloriesFromFat = caloriesFromFat;
+      this->totalFatG = totalFatG;
+      this->totalFatDV = totalFatDV;
+      this->sodiumG = sodiumG;
+      this->sodiumDV = sodiumDV;
+      this->potassiumG = potassiumG;
+      this->potassiumDV = potassiumDV;
+      this->totalCarbG = totalCarbG;
+      this->totalCarbDV = totalCarbDV;
+      this->dietaryFiberG = dietaryFiberG;
+      this->dietaryFiberDV = dietaryFiberDV;
+      this->sugars = sugars;
+      this->protein = protein;
+      this->vitaminA = vitaminA;
+      this->vitaminC = vitaminC;
+      this->calcium = calcium;
+      this->iron = iron;
+      this->saturatedFatDV = saturatedFatDV;
+      this->saturatedFatMG = saturatedFatMG;
+      this->cholesterolDV = cholesterolDV;
+      this->cholesterolMG = cholesterolMG;
+      this->foodType = foodType;
+   }
 
-   public:
-      // construtor 
-      Alimentos(string key, float calories, float caloriesFromFat, float totalFatG, float totalFatDV, float sodiumG, float potassiumG, float potassiumDV, float totalCarbG, float totalCarbDV, float dietaryFiberG, float dietaryFiberDV, float sugars, float protein, float vitaminA, float vitaminC, float calcium, float iron, float saturatedFatDV, float saturatedFatMG, float cholesterolDV, float cholesterolMG, float foodType){
-         this->key = key;
-         this->calories = calories;
-         this->caloriesFromFat = caloriesFromFat;
-         this->totalFatG = totalFatG;
-         this->totalFatDV = totalFatDV;
-         this->sodiumG = sodiumG;
-         this->sodiumDV = sodiumDV;
-         this->potassiumG = potassiumG;
-         this->potassiumDV = potassiumDV;
-         this->totalCarbG = totalCarbG;
-         this->totalCarbDV = totalCarbDV;
-         this->dietaryFiberG = dietaryFiberG;
-         this->dietaryFiberDV = dietaryFiberDV;
-         this->sugars = sugars;
-         this->protein = protein;
-         this->vitaminA = vitaminA;
-         this->vitaminC = vitaminC;
-         this->calcium = calcium;
-         this->iron = iron;
-         this->saturatedFatDV = saturatedFatDV;
-         this->saturatedFatMG = saturatedFatMG;
-         this->cholesterolDV = cholesterolDV;
-         this->cholesterolMG = cholesterolMG;
-         this->foodType = foodType;
-      } 
+   // getters e setters atributos
+   string getKey() { return this->key; };
+   void setKey(string key) { this->key = key; };
 
-      //getters e setters atributos  
-      string getKey() {return this->key;};
-      void setKey(string key){this->key = key;};
+   float getCalories() { return this->calories; };
+   void setCalories(float calories) { this->calories = calories; };
 
-      int getCalories() {return this->calories;};
-      void setCalories(int calories){this->calories = calories;};
+   float getCaloriesFromFat() { return this->caloriesFromFat; };
+   void setCaloriesFromFat(float caloriesFromFat) { this->caloriesFromFat = caloriesFromFat; };
 
-      int getCaloriesFromFat() {return this->caloriesFromFat;};
-      void setCaloriesFromFat(int caloriesFromFat){this->caloriesFromFat = caloriesFromFat;};
+   float getTotalFatG() { return this->totalFatG; };
+   void setTotalFatG(float totalFatG) { this->totalFatG = totalFatG; }
 
-      int getTotalFatG() {return this->totalFatG;};
-      void setTotalFatG(int totalFatG){this->totalFatG = totalFatG;}
+   float getTotalFatDV() { return this->totalFatDV; };
+   void setTotalFatDV(float totalFatDV) { this->totalFatDV = totalFatDV; }
 
-      int getTotalFatDV() {return this->totalFatDV;};
-      void setTotalFatDV(int totalFatDV){this->totalFatDV = totalFatDV;}
+   float getSodiumG() { return this->sodiumG; };
+   void setSodiumG(float sodiumG) { this->sodiumG = sodiumG; }
 
-      int getSodiumG() {return this->sodiumG;};
-      void setSodiumG(int sodiumG){this->sodiumG = sodiumG;}
+   float getSodiumDV() { return this->sodiumDV; };
+   void setSodiumDV(float sodiumDV) { this->sodiumDV = sodiumDV; }
 
-      int getSodiumDV() {return this->sodiumDV;};
-      void setSodiumDV(int sodiumDV){this->sodiumDV = sodiumDV;}
+   float getPotassiumG() { return this->potassiumG; };
+   void setPotassiumG(float potassiumG) { this->potassiumG = potassiumG; }
 
-      int getPotassiumG() {return this->potassiumG;};
-      void setPotassiumG(int potassiumG){this->potassiumG = potassiumG;}
+   float getPotassiumDV() { return this->potassiumDV; };
+   void setPotassiumDV(float potassiumDV) { this->potassiumDV = potassiumDV; }
 
-      int getPotassiumDV() {return this->potassiumDV;};
-      void setPotassiumDV(int potassiumDV){this->potassiumDV = potassiumDV;}
+   float getTotalCarbG() { return this->totalCarbG; };
+   void setTotalCarbG(float totalCarbG) { this->totalCarbG = totalCarbG; }
 
-      int getTotalCarbG() {return this->totalCarbG;};
-      void setTotalCarbG(int totalCarbG){this->totalCarbG = totalCarbG;}
+   float getTotalCarbDV() { return this->totalCarbDV; };
+   void setTotalCarbDV(float totalCarbDV) { this->totalCarbDV = totalCarbDV; }
 
-      int getTotalCarbDV() {return this->totalCarbDV;};
-      void setTotalCarbDV(int totalCarbDV){this->totalCarbDV = totalCarbDV;}
+   float getDietaryFiberG() { return this->dietaryFiberG; };
+   void setDietaryFiberG(float dietaryFiberG) { this->dietaryFiberG = dietaryFiberG; }
 
-      int getDietaryFiberG() {return this->dietaryFiberG;};
-      void setDietaryFiberG(int dietaryFiberG){this->dietaryFiberG = dietaryFiberG;}
+   float getDietaryFiberDV() { return this->dietaryFiberDV; };
+   void setDietaryFiberDV(float dietaryFiberDV) { this->dietaryFiberDV = dietaryFiberDV; }
 
-      int getDietaryFiberDV() {return this->dietaryFiberDV;};
-      void setDietaryFiberDV(int dietaryFiberDV){this->dietaryFiberDV = dietaryFiberDV;}
+   float getSugars() { return this->sugars; };
+   void setSugars(float sugars) { this->sugars = sugars; }
 
-      int getSugars() {return this->sugars;};
-      void setSugars(int sugars){this->sugars = sugars;}
+   float getProtein() { return this->protein; };
+   void setProtein(float protein) { this->protein = protein; }
 
-      int getProtein() {return this->protein;};
-      void setProtein(int protein){this->protein = protein;}
+   float getVitaminA() { return this->vitaminA; };
+   void setVitaminA(float vitaminA) { this->vitaminA = vitaminA; }
 
-      int getVitaminA() {return this->vitaminA;};
-      void setVitaminA(int vitaminA){this->vitaminA = vitaminA;}
+   float getVitaminC() { return this->vitaminC; };
+   void setVitaminC(float vitaminC) { this->vitaminC = vitaminC; }
 
-      int getVitaminC() {return this->vitaminC;};
-      void setVitaminC(int vitaminC){this->vitaminC = vitaminC;}
+   float getCalcium() { return this->calcium; };
+   void setCalcium(float calcium) { this->calcium = calcium; }
 
-      int getCalcium() {return this->calcium;};
-      void setCalcium(int calcium){this->calcium = calcium;}
+   float getIron() { return this->iron; };
+   void setIron(float iron) { this->iron = iron; }
 
-      int getIron() {return this->iron;};
-      void setIron(int iron){this->iron = iron;}
+   float getSaturatedDV() { return this->saturatedFatDV; };
+   void setSaturatedDV(float saturatedFatDV) { this->saturatedFatDV = saturatedFatDV; }
 
-      int getSaturatedDV() {return this->saturatedFatDV;};
-      void setSaturatedDV(int saturatedFatDV){this->saturatedFatDV = saturatedFatDV;}
+   float getSaturatedMG() { return this->saturatedFatMG; };
+   void setSaturatedMG(float saturatedFatMG) { this->saturatedFatMG = saturatedFatMG; }
 
-      int getSaturatedMG() {return this->saturatedFatMG;};
-      void setSaturatedMG(int saturatedFatMG){this->saturatedFatMG = saturatedFatMG;}
+   float getCholesterDV() { return this->cholesterolDV; };
+   void setCholesterDV(float cholesterolDV) { this->cholesterolDV = cholesterolDV; }
 
-      int getCholesterDV() {return this->cholesterolDV;};
-      void setCholesterDV(int cholesterolDV){this->cholesterolDV = cholesterolDV;}
+   float getCholesterMG() { return this->cholesterolMG; };
+   void setCholesterMG(float cholesterolMG) { this->cholesterolMG = cholesterolMG; }
 
-      int getCholesterMG() {return this->cholesterolMG;};
-      void setCholesterMG(int cholesterolMG){this->cholesterolMG = cholesterolMG;}
-
-      int getFoodType() {return this->foodType;};
-      void setFoodType(int foodType){this->foodType = foodType;}
-
-   };
+   string getFoodType() { return this->foodType; };
+   void setFoodType(string foodType) { this->foodType = foodType; }
+};
 
 #endif
