@@ -1,8 +1,21 @@
+/*
+    Faculdade de Computação e Informática
+    Estrutura de Dados II
+    Professor: Jean M. Laine
+    Aplicação 1 (Parte A e B)
+    Aplicação que ajuda a controlar as calorias e a perda de peso
+    Alunos:
+        - Diego Guedes de Moraes (32148127)
+        - Erick Cauã Ferreira Gomes (32116251)
+        - Laura C. Balbachan dos Santos (32173008)
+        - Pedro Moreno Campos (32172656)
+*/
+
 #include <iostream>
 #include <Arvore.h>
 #include <Alimentos.h>
 
-#include "binarySearchTree.cpp"
+#include "binarySearchTree.h"
 
 using namespace std;
 

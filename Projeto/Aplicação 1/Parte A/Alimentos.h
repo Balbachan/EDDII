@@ -1,3 +1,16 @@
+/*
+    Faculdade de Computação e Informática
+    Estrutura de Dados II
+    Professor: Jean M. Laine
+    Aplicação 1 (Parte A e B)
+    Aplicação que ajuda a controlar as calorias e a perda de peso
+    Alunos:
+        - Diego Guedes de Moraes (32148127)
+        - Erick Cauã Ferreira Gomes (32116251)
+        - Laura C. Balbachan dos Santos (32173008)
+        - Pedro Moreno Campos (32172656)
+*/
+
 #ifndef ALIMENTOS_H_
 #define ALIMENTOS_H_
 
@@ -10,16 +23,16 @@ using namespace std;
    {
    private:
       string key;
-      string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
-      string totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
-      string calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
+      int calories, caloriesFromFat, totalFatG, totalFatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
+      int totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
+      int calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
       int * left;
       int * right;
 
 
    public:
       // construtor 
-      string Alimentos(string key){
+      Alimentos(string key){
          this->calories = calories;
          this->caloriesFromFat = caloriesFromFat;
          this->totalFatG = totalFatG;
@@ -38,10 +51,10 @@ using namespace std;
          this->vitaminC = vitaminC;
          this->calcium = calcium;
          this->iron = iron;
-         this->saturatedDV = saturatedDV;
-         this->saturatedMG = saturatedMG;
-         this->cholesterDV = cholesterDV;
-         this->cholesterMG = cholesterMG;
+         this->saturatedFatDV = saturatedFatDV;
+         this->saturatedFatMG = saturatedFatMG;
+         this->cholesterolDV = cholesterolDV;
+         this->cholesterolMG = cholesterolMG;
          this->foodType = foodType;
       } 
 
@@ -49,74 +62,74 @@ using namespace std;
       string getKey() {return this->key;};
       void setKey(string key){this->key = key;};
 
-      string getCalories() {return this->calories;};
-      void setCalories(string calories){this->calories = calories;};
+      int getCalories() {return this->calories;};
+      void setCalories(int calories){this->calories = calories;};
 
-      string getCaloriesFromFat() {return this->caloriesFromFat;};
-      void setCaloriesFromFat(string caloriesFromFat){this->caloriesFromFat = caloriesFromFat;};
+      int getCaloriesFromFat() {return this->caloriesFromFat;};
+      void setCaloriesFromFat(int caloriesFromFat){this->caloriesFromFat = caloriesFromFat;};
 
-      string getTotalFatg() {return this->totalFatG;};
-      void setTotalFatG(string totalFatG){this->totalFatG = totalFatG;}
+      int getTotalFatg() {return this->totalFatG;};
+      void setTotalFatG(int totalFatG){this->totalFatG = totalFatG;}
 
-      string getTotalFatDV() {return this->totalFatDV;};
-      void setTotalFatDV(string totalFatDV){this->totalFatDV = totalFatDV;}
+      int getTotalFatDV() {return this->totalFatDV;};
+      void setTotalFatDV(int totalFatDV){this->totalFatDV = totalFatDV;}
 
-      string getSodiumG() {return this->sodiumG;};
-      void setSodiumG(string sodiumG){this->sodiumG = sodiumG;}
+      int getSodiumG() {return this->sodiumG;};
+      void setSodiumG(int sodiumG){this->sodiumG = sodiumG;}
 
-      string getSodiumDV() {return this->sodiumDV;};
-      void setSodiumDV(string sodiumDV){this->sodiumDV = sodiumDV;}
+      int getSodiumDV() {return this->sodiumDV;};
+      void setSodiumDV(int sodiumDV){this->sodiumDV = sodiumDV;}
 
-      string getPotassiumG() {return this->potassiumG;};
-      void setPotassiumG(string potassiumG){this->potassiumG = potassiumG;}
+      int getPotassiumG() {return this->potassiumG;};
+      void setPotassiumG(int potassiumG){this->potassiumG = potassiumG;}
 
-      string getPotassiumDV() {return this->potassiumDV;};
-      void setPotassiumDV(string potassiumDV){this->potassiumDV = potassiumDV;}
+      int getPotassiumDV() {return this->potassiumDV;};
+      void setPotassiumDV(int potassiumDV){this->potassiumDV = potassiumDV;}
 
-      string getTotalCarbG() {return this->totalCarbG;};
-      void setTotalCarbG(string totalCarbG){this->totalCarbG = totalCarbG;}
+      int getTotalCarbG() {return this->totalCarbG;};
+      void setTotalCarbG(int totalCarbG){this->totalCarbG = totalCarbG;}
 
-      string getTotalCarbDV() {return this->totalCarbDV;};
-      void setTotalCarbDV(string totalCarbDV){this->totalCarbDV = totalCarbDV;}
+      int getTotalCarbDV() {return this->totalCarbDV;};
+      void setTotalCarbDV(int totalCarbDV){this->totalCarbDV = totalCarbDV;}
 
-      string getDietaryFiberG() {return this->dietaryFiberG;};
-      void setDietaryFiberG(string dietaryFiberG){this->dietaryFiberG = dietaryFiberG;}
+      int getDietaryFiberG() {return this->dietaryFiberG;};
+      void setDietaryFiberG(int dietaryFiberG){this->dietaryFiberG = dietaryFiberG;}
 
-      string getDietaryFiberDV() {return this->dietaryFiberDV;};
-      void setDietaryFiberDV(string dietaryFiberDV){this->dietaryFiberDV = dietaryFiberDV;}
+      int getDietaryFiberDV() {return this->dietaryFiberDV;};
+      void setDietaryFiberDV(int dietaryFiberDV){this->dietaryFiberDV = dietaryFiberDV;}
 
-      string getSugars() {return this->sugars;};
-      void setSugars(string sugars){this->sugars = sugars;}
+      int getSugars() {return this->sugars;};
+      void setSugars(int sugars){this->sugars = sugars;}
 
-      string getProtein() {return this->protein;};
-      void setProtein(string protein){this->protein = protein;}
+      int getProtein() {return this->protein;};
+      void setProtein(int protein){this->protein = protein;}
 
-      string getVitaminA() {return this->vitaminA;};
-      void setVitaminA(string vitaminA){this->vitaminA = vitaminA;}
+      int getVitaminA() {return this->vitaminA;};
+      void setVitaminA(int vitaminA){this->vitaminA = vitaminA;}
 
-      string getVitaminC() {return this->vitaminC;};
-      void setVitaminC(string vitaminC){this->vitaminC = vitaminC;}
+      int getVitaminC() {return this->vitaminC;};
+      void setVitaminC(int vitaminC){this->vitaminC = vitaminC;}
 
-      string getCalcium() {return this->calcium;};
-      void setCalcium(string calcium){this->calcium = calcium;}
+      int getCalcium() {return this->calcium;};
+      void setCalcium(int calcium){this->calcium = calcium;}
 
-      string getIron() {return this->iron;};
-      void setIron(string iron){this->iron = iron;}
+      int getIron() {return this->iron;};
+      void setIron(int iron){this->iron = iron;}
 
-      string getSaturatedDV() {return this->saturatedDV;};
-      void setSaturatedDV(string saturatedDV){this->saturatedDV = saturatedDV;}
+      int getSaturatedDV() {return this->saturatedFatDV;};
+      void setSaturatedDV(int saturatedFatDV){this->saturatedFatDV = saturatedFatDV;}
 
-      string getSaturatedMG() {return this->saturatedMG;};
-      void setSaturatedMG(string saturatedMG){this->saturatedMG = saturatedMG;}
+      int getSaturatedMG() {return this->saturatedFatMG;};
+      void setSaturatedMG(int saturatedFatMG){this->saturatedFatMG = saturatedFatMG;}
 
-      string getCholesterDV() {return this->cholesterDV;};
-      void setCholesterDV(string cholesterDV){this->cholesterDV = cholesterDV;}
+      int getCholesterDV() {return this->cholesterolDV;};
+      void setCholesterDV(int cholesterolDV){this->cholesterolDV = cholesterolDV;}
 
-      string getCholesterMG() {return this->cholesterMG;};
-      void setCholesterMG(string cholesterMG){this->cholesterMG = cholesterMG;}
+      int getCholesterMG() {return this->cholesterolMG;};
+      void setCholesterMG(int cholesterolMG){this->cholesterolMG = cholesterolMG;}
 
-      string getFoodType() {return this->foodType;};
-      void setFoodType(string foodType){this->foodType = foodType;}
+      int getFoodType() {return this->foodType;};
+      void setFoodType(int foodType){this->foodType = foodType;}
 
 
       //getters e setters posição   
