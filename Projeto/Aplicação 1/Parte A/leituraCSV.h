@@ -18,19 +18,21 @@
 #include <string>
 #include <fstream>
 #include "Alimentos.h"
+#include "Node.h"
 
 using namespace std;
 
-void leituraCSV() {
+binarySearchTree leituraCSV() {
     int count;
+    string key; 
     string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
     string totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
     string calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
     
-    string nameFile = "NutritionalFacts_Fruit_Vegetables_Seafood.csv";
-    ifstream csvFile;
+    binarySearchTree *bst = new binarySearchTree();
 
-    csvFile.open(nameFile);
+    string nameFile = "NutritionalFacts_Fruit_Vegetables_Seafood.csv";
+    ifstream csvFile(nameFile);
 
     if(csvFile.is_open()) {
         while(!csvFile.eof()) {
@@ -40,34 +42,37 @@ void leituraCSV() {
         }
     }
     else {
-        getline(csvFile, calories, ',');
-        getline(csvFile, caloriesFromFat, ',');
-        getline(csvFile, totalFatG, ',');
-        getline(csvFile, totalfatDV, ',');
-        getline(csvFile, sodiumG, ',');
-        getline(csvFile, sodiumDV, ',');
-        getline(csvFile, potassiumG, ',');
-        getline(csvFile, potassiumDV, ',');
-        getline(csvFile, totalCarbG, ',');
-        getline(csvFile, totalCarbDV, ',');
-        getline(csvFile, dietaryFiberG, ',');
-        getline(csvFile, dietaryFiberDV, ',');
-        getline(csvFile, sugars, ',');
-        getline(csvFile, protein, ',');
-        getline(csvFile, vitaminA, ',');
-        getline(csvFile, vitaminC, ',');
-        getline(csvFile, calcium, ',');
-        getline(csvFile, iron, ',');
-        getline(csvFile, saturatedFatDV, ',');
-        getline(csvFile, saturatedFatMG, ',');
-        getline(csvFile, cholesterolDV, ',');
-        getline(csvFile, foodType, ',');
+        getline(csvFile, key, ';');
+        getline(csvFile, calories, ';');
+        getline(csvFile, caloriesFromFat, ';');
+        getline(csvFile, totalFatG, ';');
+        getline(csvFile, totalfatDV, ';');
+        getline(csvFile, sodiumG, ';');
+        getline(csvFile, sodiumDV, ';');
+        getline(csvFile, potassiumG, ';');
+        getline(csvFile, potassiumDV, ';');
+        getline(csvFile, totalCarbG, ';');
+        getline(csvFile, totalCarbDV, ';');
+        getline(csvFile, dietaryFiberG, ';');
+        getline(csvFile, dietaryFiberDV, ';');
+        getline(csvFile, sugars, ';');
+        getline(csvFile, protein, ';');
+        getline(csvFile, vitaminA, ';');
+        getline(csvFile, vitaminC, ';');
+        getline(csvFile, calcium, ';');
+        getline(csvFile, iron, ';');
+        getline(csvFile, saturatedFatDV, ';');
+        getline(csvFile, saturatedFatMG, ';');
+        getline(csvFile, cholesterolDV, ';');
+        getline(csvFile, foodType, ';');
 
         // adicionar na árvore 
-
+        Alimentos * alimento = new Alimentos(key, stof(calories), stof(caloriesFromFat), stof(totalFatG), stof(totalfatDV), stof(sodiumG), stof(sodiumDV), stof(potassiumG), stof(potassiumDV), stof(totalCarbG), stof(totalCarbDV), stof(dietaryFiberG), stof(dietaryFiberDV), stof(sugars), stof(protein), stof(vitaminA), stof(vitaminC), stof(calcium), stof(iron), stof(saturatedFatDV), stof(saturatedFatMG), stof(cholesterolDV), stof(foodType));
+        
     }
 
     csvFile.close();
+    return bst;
 }
 
 #endif

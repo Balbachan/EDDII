@@ -16,19 +16,21 @@
 
 #include <iostream>
 #include <string>
+#include "Alimentos.h"
 
 using namespace std;
 
-class Node 
+class Node
 {
 	private:
+
 		Node *left, *right;
-		string key;
+		string key; 
 
 	public:
-		Node(string key)
+		Node(Alimentos alimento)
 		{
-			this->key = key;
+			this->key = alimento.getKey();
 			this->left = nullptr;
 			this->right = nullptr;
 		}
@@ -42,6 +44,7 @@ class Node
 		
 		Node *getRight() { return this->right; }
 		void setRight(Node *right) { this->right = right; }
+		
 };
 
 #endif 

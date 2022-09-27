@@ -23,16 +23,14 @@ using namespace std;
    {
    private:
       string key;
-      int calories, caloriesFromFat, totalFatG, totalFatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
-      int totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
-      int calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
-      int * left;
-      int * right;
-
+      float calories, caloriesFromFat, totalFatG, totalFatDV, sodiumG, sodiumDV, potassiumG, potassiumDV; 
+      float totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC; 
+      float calcium, iron, saturatedFatDV, saturatedFatMG, cholesterolDV, cholesterolMG, foodType;
 
    public:
       // construtor 
-      Alimentos(string key){
+      Alimentos(string key, float calories, float caloriesFromFat, float totalFatG, float totalFatDV, float sodiumG, float potassiumG, float potassiumDV, float totalCarbG, float totalCarbDV, float dietaryFiberG, float dietaryFiberDV, float sugars, float protein, float vitaminA, float vitaminC, float calcium, float iron, float saturatedFatDV, float saturatedFatMG, float cholesterolDV, float cholesterolMG, float foodType){
+         this->key = key;
          this->calories = calories;
          this->caloriesFromFat = caloriesFromFat;
          this->totalFatG = totalFatG;
@@ -68,7 +66,7 @@ using namespace std;
       int getCaloriesFromFat() {return this->caloriesFromFat;};
       void setCaloriesFromFat(int caloriesFromFat){this->caloriesFromFat = caloriesFromFat;};
 
-      int getTotalFatg() {return this->totalFatG;};
+      int getTotalFatG() {return this->totalFatG;};
       void setTotalFatG(int totalFatG){this->totalFatG = totalFatG;}
 
       int getTotalFatDV() {return this->totalFatDV;};
@@ -131,13 +129,6 @@ using namespace std;
       int getFoodType() {return this->foodType;};
       void setFoodType(int foodType){this->foodType = foodType;}
 
-
-      //getters e setters posição   
-      int * getLeft(){return this->left;}
-      void setLeft(int * left){this->left = left;}
-      
-      int * getRight(){return this->right;}
-      void setRight(int * right){this->right = right;}
    };
 
 #endif
