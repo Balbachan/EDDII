@@ -2,45 +2,27 @@
 #define NO.H
 
 #include <iostream>
+using namespace std;
 
-class No {
-    private:
-    No *esq, *dir;
-    int chave;
+class Node
+{
+private:
+	Node *left, *right;
+	int key;
 
-    public: 
-    No (int chave) {
-        this -> chave = chave;
-        esq = NULL;
-        dir = NULL;
-    }
+public:
+	Node(int key)
+	{
+		this->key = key;
+		this->left = nullptr;
+		this->right = nullptr;
+	}
 
-    // Getters ---------------------------------
-    int getChave() {
-        return chave;
-    }
-
-    No* getEsq() {
-        return esq;
-    }
-
-    No* getDir() {
-        return dir;
-    }
-
-    // Setters ---------------------------------
-    void setEsq(No *no) {
-        esq = no;
-    }
-
-    void setDir(No *no) {
-        dir = no;
-    }
-
-    void setChave(int k) {
-        chave = k;
-    }
-
+	// getters & setters
+	int getKey() { return this->key; }
+	Node *getLeft() { return this->left; }
+	Node *getRight() { return this->right; }
+	void setKey(int key) { this->key = key; }
+	void setLeft(Node *left) { this->left = left; }
+	void setRight(Node *right) { this->right = right; }
 };
-
-#endif
