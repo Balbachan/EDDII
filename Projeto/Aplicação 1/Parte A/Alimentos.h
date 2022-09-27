@@ -1,5 +1,5 @@
-#ifndef Alimentos.h
-#define Alimentos.h
+#ifndef ALIMENTOS_H
+#define ALIMENTOS_H
 
 #include <iostream>
 #include <string>
@@ -14,9 +14,40 @@ class Alimentos
    private:
 
       int option;
+      string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumD; 
+      string totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC;
+      string calcium, iron, saturatedDV, saturatedMG, cholesterDV, cholesterMG, foodType;
 
-      string calories, caloriesFromFat, totalFatG, totalfatDV, sodiumG, sodiumDV, potassiumG, potassiumDV, totalCarbG, totalCarbDV, dietaryFiberG, dietaryFiberDV, sugars, protein, vitaminA, vitaminC, calcium, iron, saturatedDV, saturatedMG, cholesterDV, cholesterMG, foodType;
+   public: 
+      // construtor 
+      string Alimentos(){
+         this->calories = calories;
+         this->caloriesFromFat = caloriesFromFat;
+         this->totalFatG = totalFatG;
+         this->totalFatDV = totalFatDV;
+         this->sodiumG = sodiumG;
+         this->sodiumDV = sodiumDV;
+         this->potassiumG = potassiumG;
+         this->potassiumDV = potassiumDV;
+         this->totalCarbG = totalCarbG;
+         this->totalCarbDV = totalCarbDV;
+         this->dietaryFiberG = dietaryFiberG;
+         this->dietaryFiberDV = dietaryFiberDV;
+         this->sugars = sugars;
+         this->protein = protein;
+         this->vitaminA = vitaminA;
+         this->vitaminC = vitaminC;
+         this->calcium = calcium;
+         this->iron = iron;
+         this->saturatedDV = saturatedDV;
+         this->saturatedMG = saturatedMG;
+         this->cholesterDV = cholesterDV;
+         this->cholesterMG = cholesterMG;
+         this->foodType = foodType;
+      }
 
+
+      // getters e setters 
       string getCalories() {return this->calories;};
       void setCalories(string calories){this->calories = calories;};
 
@@ -87,3 +118,5 @@ class Alimentos
       void setFoodType(string foodType){this->foodType = foodType;}
 
    };
+
+#endif
