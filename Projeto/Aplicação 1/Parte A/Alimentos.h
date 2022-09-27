@@ -19,7 +19,7 @@ using namespace std;
 
    public:
       // construtor 
-      string Alimentos(){
+      string Alimentos(string key){
          this->calories = calories;
          this->caloriesFromFat = caloriesFromFat;
          this->totalFatG = totalFatG;
