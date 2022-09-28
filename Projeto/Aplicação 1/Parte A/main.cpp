@@ -25,8 +25,12 @@ int main(int argc, char *argv[])
 
     leituraCSV(tree);
 
-    cout << "\n Imprimindo em ordem...";
-    tree->inOrder(tree->getSource());
+    string teste = "Tilapia";
+
+    tree->principalSearch(tree->getSource(), teste);
+
+    // cout << "\n Imprimindo em ordem...";
+    // tree->inOrder(tree->getSource());
 
     // int option, x;
     // cout << ("\nTestando o TAD BST (Elementos do tipo int)\n");
