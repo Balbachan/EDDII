@@ -25,10 +25,11 @@ class Node
 private:
 	Node *left, *right;
 	string key;
-	Alimentos dados;
+	Alimentos *dados;
 
 public:
-	Node(string key, Alimentos dados_alimentos)
+	Node(){};
+	Node(string key, Alimentos *dados_alimentos)
 	{
 		this->key = key;
 		this->dados = dados_alimentos;
@@ -40,7 +41,7 @@ public:
 	string getKey() { return this->key; }
 	void setKey(string key) { this->key = key; }
 
-	Alimentos getDados() { return this->dados; }
+	Alimentos *getDados() { return this->dados; }
 
 	Node *getLeft() { return this->left; }
 	void setLeft(Node *left) { this->left = left; }

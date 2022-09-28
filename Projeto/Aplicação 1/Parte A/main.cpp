@@ -21,27 +21,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    setlocale(LC_ALL, "Portuguese"); // adição acentuação (acho)
-
-    binarySearchTree tree;
+    binarySearchTree *tree = new binarySearchTree();
 
     leituraCSV(tree);
 
-    int option, x;
-    cin >> option;
+    cout << "\n Imprimindo em ordem...";
+    tree->inOrder(tree->getSource());
 
-    switch (option)
-    {
-    case 1:
-    {
-        cout << "\n Imprimindo em pr�-ordem...";
-        tree.inOrder(tree.getSource());
-        cout << "teste";
-        break;
-    }
-    }
-    while (option != 0)
-        ;
     // int option, x;
     // cout << ("\nTestando o TAD BST (Elementos do tipo int)\n");
 

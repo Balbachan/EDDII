@@ -33,13 +33,13 @@ public:
 	//******************************************************************
 	void insert(string key, Alimentos *dados)
 	{
-		if (source == nullptr)				// verifica se a ?rvore est? vazia
-			source = new Node(key, *dados); // cria um novo n?
+		if (source == nullptr)			   // verifica se a ?rvore est? vazia
+			source = new Node(key, dados); // cria um novo n?
 		else
-			insertAux(source, key, *dados);
+			insertAux(source, key, dados);
 	}
 
-	void insertAux(Node *node, string key, Alimentos dados)
+	void insertAux(Node *node, string key, Alimentos *dados)
 	{
 		// se for menor, ent?o insere ? esquerda
 		if (key < node->getKey())

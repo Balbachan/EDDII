@@ -1,9 +1,10 @@
 {
-    "files.associations": {
-        "iostream": "cpp",
-        "xstring": "cpp",
-        "fstream": "cpp",
-        "*.tcc": "cpp",
-        "new": "cpp"
-    }
+  "files.associations": {
+    "iostream": "cpp",
+    "xstring": "cpp",
+    "fstream": "cpp",
+    "*.tcc": "cpp",
+    "new": "cpp",
+    "ostream": "cpp"
+  }
 }
