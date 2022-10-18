@@ -1,4 +1,9 @@
 Documentação
+Código
+Algumas ideias para o código:
+	- 
+
+
 
 Tabela
 Para maior legibilidade dos dados foram alterados:
