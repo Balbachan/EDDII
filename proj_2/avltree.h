@@ -1,3 +1,6 @@
+#ifndef __AVLTREE_H__
+#define __AVLTREE_H__
+
 #include <iostream>
 #include "node.h"
 
@@ -45,3 +48,4 @@ class AVL {
 
 };
 
+#endif

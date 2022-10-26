@@ -1,8 +1,13 @@
+#ifndef __NODE_H__
+#define __NODE_H__
+
+#include <iostream>
 
 class Node {
     private:
         Node *left, *right;
         int data;
+        // herdar o nome que está na classe alimentos e os dados também
 
     public:
         Node(int data) {
@@ -37,3 +42,5 @@ class Node {
     }
     
 };
+
+#endif
